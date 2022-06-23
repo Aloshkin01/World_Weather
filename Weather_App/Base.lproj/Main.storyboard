@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pngtree-blue-arc-weather-background-image_253195" translatesAutoresizingMaskIntoConstraints="NO" id="Onp-di-GXs">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            </imageView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="pTV-C0-SX7">
+                                <rect key="frame" x="0.0" y="98" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1th-UV-brF">
+                                <rect key="frame" x="163" y="419" width="88" height="58.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5i-h1-Bcz">
+                                <rect key="frame" x="67.5" y="515" width="279" height="58.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pTV-C0-SX7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="54" id="1VW-Cf-7Pq"/>
+                            <constraint firstItem="pTV-C0-SX7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9eU-GP-N3O"/>
+                            <constraint firstItem="W5i-h1-Bcz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ADP-Po-QkD"/>
+                            <constraint firstItem="Onp-di-GXs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OqW-W4-qtF"/>
+                            <constraint firstItem="Onp-di-GXs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Q3I-ec-3CG"/>
+                            <constraint firstItem="W5i-h1-Bcz" firstAttribute="top" secondItem="1th-UV-brF" secondAttribute="bottom" constant="37.5" id="SSe-TI-Ltx"/>
+                            <constraint firstItem="Onp-di-GXs" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UA4-3n-Dw5"/>
+                            <constraint firstItem="1th-UV-brF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZIL-ek-YrU"/>
+                            <constraint firstAttribute="bottom" secondItem="Onp-di-GXs" secondAttribute="bottom" id="cl3-Vd-Aov"/>
+                            <constraint firstItem="1th-UV-brF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cqS-1C-Kro"/>
+                            <constraint firstItem="pTV-C0-SX7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kUa-Ia-Xb0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityLable" destination="1th-UV-brF" id="Nuu-UB-hcW"/>
+                        <outlet property="searchBar" destination="pTV-C0-SX7" id="Tin-RO-cdG"/>
+                        <outlet property="temperatureLable" destination="W5i-h1-Bcz" id="HWG-gc-ahw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="77.678571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pngtree-blue-arc-weather-background-image_253195" width="270" height="405"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
